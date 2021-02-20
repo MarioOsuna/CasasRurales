@@ -1,0 +1,266 @@
+:root {
+    --primaryColor: #68656518;
+    --secondColor: #665c04;
+    --Green: #15261f;
+}
+
+@font-face {
+    font-family: "fuente";
+    src: url("../font/Magazine.ttf");
+}
+
+body main {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+h3,
+strong {
+    font-size: 20px;
+}
+
+div {
+    text-align: center;
+}
+
+#enviar {
+    background-color: var(--Green);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#enviar:hover {
+    opacity: 1
+}
+
+.casa {
+    width: 320px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: var(--Green);
+    box-shadow: 1px 2px 5px grey;
+}
+
+header div img {
+    width: 150px;
+    transition-duration: 1s;
+}
+
+header div img:hover {
+    transition-duration: 1s;
+    transform: rotate(-360deg) scale(1.2);
+}
+
+header div {
+    padding: 10px;
+    color: white;
+}
+
+.enlaces {
+    display: flex;
+    flex-direction: column;
+}
+
+section article {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.iconos {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.iconos img {
+    width: 20px;
+    height: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "fuente";
+    color: var(--Green);
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+p {
+    margin: 10px;
+    color: var(--secondColor);
+    font-size: 18px;
+}
+
+h4 {
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+}
+
+form {
+    text-align-last: center;
+}
+
+form #fechaEntrada::before {
+    content: "Fecha entrada: \0000a0";
+}
+
+form #fechaSalida::before {
+    content: "Fecha salida: \0000a0";
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+}
+
+form input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+select {
+    width: 88%;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+form input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"] {
+    color: var(--Green);
+}
+
+input {
+    margin: 3px;
+    padding: 5px;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+form input[type="date"]:focus:required:invalid {
+    background-color: rgb(216, 146, 146);
+}
+
+form input[type="date"]:focus:required:valid {
+    background-color: rgb(146, 219, 146);
+}
+
+.datosCasa {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.datosCasa div {
+    display: flex;
+    flex-direction: row;
+}
+
+.estrellas {
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--Green);
+}
+
+footer div {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+footer div img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 768px) {
+    .comentario {
+        display: flex;
+        flex-direction: column;
+    }
+    section article {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+    .reservar {
+        display: flex;
+        flex-direction: column;
+    }
+    .datosCasa {
+        display: flex;
+        flex-direction: row;
+        text-align: -webkit-center;
+    }
+    .loc {
+        display: flex;
+        flex-direction: column;
+    }
+    .datosCasa article {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .datosCasa div {
+        flex-grow: 1;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    body {
+        font-size: 18px;
+    }
+}
